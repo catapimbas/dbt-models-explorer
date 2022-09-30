@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "dbt-models-explorer"}]
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.9"
 PyYAML = "^6.0"
 rich = "^12.5.1"
 
