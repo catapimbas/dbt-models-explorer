@@ -8,7 +8,7 @@ import yaml
 class Column:
     name: str
     description: str
-    props: dict
+    props: list
 
 
 @dataclass
@@ -18,6 +18,9 @@ class Table:
     columns: list[Column]
 
 
+RUNTIME_ERRORS = []
+
+
 def load_from_yaml(dir_path: str):
     for dirpath, _, filenames in os.walk(dir_path):
         for filename in filter(lambda name: name.endswith('.yml'), filenames):
@@ -25,7 +28,7 @@ def load_from_yaml(dir_path: str):
                 try:
                     model_dict = yaml.safe_load(f)
                 except yaml.YAMLError as e:
-                    print(e)
+                    RUNTIME_ERRORS.append(e)
                     break
             for model in model_dict['models']:
                 yield load_table(model)
