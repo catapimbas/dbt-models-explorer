@@ -27,7 +27,7 @@ ap.add_argument(
     type=str,
     default="relationships.csv",
     nargs="?",
-    help="Name for the file when the - -format option generates a file, (default: %(default)s)",
+    help="Name for the file when the --format option generates a file, (default: %(default)s)",
 )
 
 
