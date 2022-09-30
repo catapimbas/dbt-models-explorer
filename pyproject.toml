@@ -9,6 +9,7 @@ packages = [{include = "dbt_matriz_buss"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 PyYAML = "^6.0"
+rich = "^12.5.1"
 
 
 [tool.poetry.group.dev.dependencies]
