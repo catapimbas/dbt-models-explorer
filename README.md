@@ -1,1 +1,1 @@
-# dbt-matriz-buss
+# dbt-models-explorer
