@@ -17,8 +17,9 @@ def make_table(model_table: Table):
 def print_relationships(tables: Iterable[Table]):
     rich_table = RichTable(title=('Relationships'))
     rich_table.add_column('Table name', style="bold green")
+    rich_table.add_column('Column', style="bold green")
     rich_table.add_column('Ref table', style="bold blue")
-    rich_table.add_column('Field', style="bold yellow")
+    rich_table.add_column('Field', style="bold blue")
     for table in tables:
         for column in table.columns:
             if column.props:
@@ -28,5 +29,5 @@ def print_relationships(tables: Iterable[Table]):
                             if 'relationships' in attr:
                                 rel = prop['relationships']
                                 rich_table.add_row(
-                                    table.name, rel['to'], rel['field'])
+                                    table.name, column.name, rel['to'], rel['field'])
     console.print(rich_table)
