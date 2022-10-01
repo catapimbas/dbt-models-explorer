@@ -1,5 +1,4 @@
 import sys
-import tabnanny
 from argparse import ArgumentParser
 
 from .loader import RUNTIME_ERRORS, load_from_yaml
