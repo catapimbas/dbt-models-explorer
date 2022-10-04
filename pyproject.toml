@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
-packages = [{include = "dbt-models-explorer"}]
+packages = [{include = "dbt_models_explorer"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
@@ -20,4 +20,4 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-dbt-models-explorer = 'dbt-models-explorer.__main__:main'
+dbt-models-explorer = 'dbt_models_explorer.__main__:main'
