@@ -1,5 +1,6 @@
 import os
 from dataclasses import dataclass
+from typing import List
 
 import yaml
 
@@ -8,14 +9,14 @@ import yaml
 class Column:
     name: str
     description: str
-    props: list
+    props: List
 
 
 @dataclass
 class Table:
     name: str
     description: str
-    columns: list[Column]
+    columns: List[Column]
 
 
 RUNTIME_ERRORS = []
