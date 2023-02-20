@@ -1,16 +1,17 @@
 [tool.poetry]
 name = "dbt-models-explorer"
 version = "0.1.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+description = "DBT models explorer with output generator to check, analyze and document"
+authors = ["Rodrigo Cristiano <rcristianofv@hotmail.com>", "Rafael dos Santos <rahfaeu@gmail.com>"]
 readme = "README.md"
 packages = [{include = "dbt_models_explorer"}]
+license = "MIT"
+repository = "https://github.com/catapimbas/dbt-models-explorer"
 
 [tool.poetry.dependencies]
 python = "^3.7"
 PyYAML = "^6.0"
 rich = "^12.6.0"
-
 
 [tool.poetry.group.dev.dependencies]
 autopep8 = "^1.7.0"
